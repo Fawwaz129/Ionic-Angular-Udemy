@@ -21,12 +21,13 @@ export class RecipesService {
 ];
   constructor() { }
 
-  getAllRecepis() {
+  getAllRecipes(){
+    console.log('getAllRecipes called');
     return [...this.recipes];
   }
-  getRecipe(recipeId: string) {
-    return {...this.recipes.find(recipe => {
-      return recipe.id === recipeId;
-    })}
+
+  getRecipe(recipeId: string){
+    console.log('getRecipe called with recipeId:', recipeId);
+    return this.recipes.find(recipe => recipe.id === recipeId);
   }
 }

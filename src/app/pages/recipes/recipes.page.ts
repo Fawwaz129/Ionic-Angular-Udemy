@@ -8,13 +8,13 @@ import { RecipesService } from './recipes.service';
   styleUrls: ['./recipes.page.scss'],
 })
 export class RecipesPage implements OnInit {
- recipes: Recipe[] = [];
+ recipes!: Recipe[];
   constructor(
     private rcpService: RecipesService,
   ) { }
 
   ngOnInit() {
-    this.recipes = this.rcpService.getAllRecepis()
+    this.recipes = this.rcpService.getAllRecipes()
   }
 
 }
